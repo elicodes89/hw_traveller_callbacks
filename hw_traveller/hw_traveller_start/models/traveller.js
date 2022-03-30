@@ -17,7 +17,10 @@ return this.journeys.map((journey) => {
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
-
+  const result =  this.journeys.filter((journey) => {
+  return journey.transport === transport;;
+})
+return result;
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
